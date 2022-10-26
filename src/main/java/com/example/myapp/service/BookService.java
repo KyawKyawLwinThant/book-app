@@ -33,6 +33,10 @@ public class BookService {
         categoryDao.save(category);
     }
 
+    public Book findBookById(int id){
+        return bookDao.findById(id).orElseThrow(EntityNotFoundException::new);
+    }
+
     public List<Category> findAllCategory(){
         return categoryDao.findAll();
     }

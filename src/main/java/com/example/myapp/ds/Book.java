@@ -35,6 +35,10 @@ public class Book {
     private Integer categoryId;
     @Transient
     private Integer authorId;
+    @ManyToMany(mappedBy = "books")
+    private List<Customer> customers=
+            new ArrayList<>();
+
 
 
 }
